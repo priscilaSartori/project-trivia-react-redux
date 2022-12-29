@@ -1,0 +1,222 @@
+{
+  "stats": {
+    "suites": 3,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-12-29T03:26:30.474Z",
+    "end": "2022-12-29T03:26:51.694Z",
+    "duration": 21220,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "fbe9d286-a15d-434e-8acf-f35660d1e4b4",
+      "title": "",
+      "fullFile": "cypress/e2e/18-20-tela-de-ranking.cy.js",
+      "file": "cypress/e2e/18-20-tela-de-ranking.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "1407bad9-10ca-4e76-99a3-6431cab87048",
+          "title": "18 - [TELA DE RANKING] Crie um botão para ir ao início",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Será validado se ao clicar no botão a pessoa volta para a tela inicial",
+              "fullTitle": "18 - [TELA DE RANKING] Crie um botão para ir ao início Será validado se ao clicar no botão a pessoa volta para a tela inicial",
+              "timedOut": null,
+              "duration": 3448,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/', {\n  onBeforeLoad(win) {\n    win.fetch = fetchMock;\n  }\n});\ncy.clearLocalStorage();\ncy.get(INPUT_PLAYER_NAME_SELECTOR).type(name1);\ncy.get(INPUT_PLAYER_EMAIL_SELECTOR).type(email1);\ncy.get(BUTTON_PLAY_SELECTOR).click();\ncy.get(CORRECT_ALTERNATIVE_SELECTOR).click();\ncy.get(BUTTON_NEXT_QUESTION_SELECTOR).click();\ncy.get(CORRECT_ALTERNATIVE_SELECTOR).click();\ncy.get(BUTTON_NEXT_QUESTION_SELECTOR).click();\ncy.get(CORRECT_ALTERNATIVE_SELECTOR).click();\ncy.get(BUTTON_NEXT_QUESTION_SELECTOR).click();\ncy.get(CORRECT_ALTERNATIVE_SELECTOR).click();\ncy.get(BUTTON_NEXT_QUESTION_SELECTOR).click();\ncy.get(CORRECT_ALTERNATIVE_SELECTOR).click();\ncy.get(BUTTON_NEXT_QUESTION_SELECTOR).click();\ncy.get(BUTTON_RANKING_SELECTOR).click();\ncy.get(BUTTON_GO_HOME_SELECTOR).click();\ncy.get(INPUT_PLAYER_EMAIL_SELECTOR).should('exist');",
+              "err": {},
+              "uuid": "73a6253d-ed4b-4d55-ba11-94f1ed3a18af",
+              "parentUUID": "1407bad9-10ca-4e76-99a3-6431cab87048",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "73a6253d-ed4b-4d55-ba11-94f1ed3a18af"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3448,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "d64c4e98-8806-4a33-a80b-4937faaa193b",
+          "title": "19 - [TELA DE RANKING] Crie o conteúdo da tela de _ranking_",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Será validado se existe uma pessoa no _ranking_",
+              "fullTitle": "19 - [TELA DE RANKING] Crie o conteúdo da tela de _ranking_ Será validado se existe uma pessoa no _ranking_",
+              "timedOut": null,
+              "duration": 2606,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(RANKING_PLAYERS_NAME_SELECTOR).should($el => {\n  expect($el).to.have.lengthOf(1);\n});",
+              "err": {},
+              "uuid": "294d599c-c3b5-4fe5-953a-6d17098a8c38",
+              "parentUUID": "d64c4e98-8806-4a33-a80b-4937faaa193b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Será validado se existem duas pessoas no _ranking_",
+              "fullTitle": "19 - [TELA DE RANKING] Crie o conteúdo da tela de _ranking_ Será validado se existem duas pessoas no _ranking_",
+              "timedOut": null,
+              "duration": 4905,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(BUTTON_GO_HOME_SELECTOR).click();\ncy.get(INPUT_PLAYER_NAME_SELECTOR).clear();\ncy.get(INPUT_PLAYER_EMAIL_SELECTOR).clear();\ncy.get(INPUT_PLAYER_NAME_SELECTOR).type(name2);\ncy.get(INPUT_PLAYER_EMAIL_SELECTOR).type(email2);\ncy.get(BUTTON_PLAY_SELECTOR).click();\ncy.get(CORRECT_ALTERNATIVE_SELECTOR).click();\ncy.get(BUTTON_NEXT_QUESTION_SELECTOR).click();\ncy.get(CORRECT_ALTERNATIVE_SELECTOR).click();\ncy.get(BUTTON_NEXT_QUESTION_SELECTOR).click();\ncy.get(CORRECT_ALTERNATIVE_SELECTOR).click();\ncy.get(BUTTON_NEXT_QUESTION_SELECTOR).click();\ncy.get(CORRECT_ALTERNATIVE_SELECTOR).click();\ncy.get(BUTTON_NEXT_QUESTION_SELECTOR).click();\ncy.get(CORRECT_ALTERNATIVE_SELECTOR).click();\ncy.get(BUTTON_NEXT_QUESTION_SELECTOR).click();\ncy.get(BUTTON_RANKING_SELECTOR).click();\ncy.get(RANKING_PLAYERS_NAME_SELECTOR).should($el => {\n  expect($el).to.have.lengthOf(2);\n});",
+              "err": {},
+              "uuid": "506f5269-034f-4887-9abf-639d316206c9",
+              "parentUUID": "d64c4e98-8806-4a33-a80b-4937faaa193b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Será validado se o _ranking_ é ordenado pela pontuação",
+              "fullTitle": "19 - [TELA DE RANKING] Crie o conteúdo da tela de _ranking_ Será validado se o _ranking_ é ordenado pela pontuação",
+              "timedOut": null,
+              "duration": 7586,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(BUTTON_GO_HOME_SELECTOR).click();\ncy.get(INPUT_PLAYER_NAME_SELECTOR).clear();\ncy.get(INPUT_PLAYER_EMAIL_SELECTOR).clear();\ncy.get(INPUT_PLAYER_NAME_SELECTOR).type(name2);\ncy.get(INPUT_PLAYER_EMAIL_SELECTOR).type(email2);\ncy.get(BUTTON_PLAY_SELECTOR).click();\ncy.get(WRONG_ALTERNATIVES_SELECTOR).first().click();\ncy.get(BUTTON_NEXT_QUESTION_SELECTOR).click();\ncy.get(WRONG_ALTERNATIVES_SELECTOR).first().click();\ncy.get(BUTTON_NEXT_QUESTION_SELECTOR).click();\ncy.get(WRONG_ALTERNATIVES_SELECTOR).first().click();\ncy.get(BUTTON_NEXT_QUESTION_SELECTOR).click();\ncy.get(WRONG_ALTERNATIVES_SELECTOR).first().click();\ncy.get(BUTTON_NEXT_QUESTION_SELECTOR).click();\ncy.get(WRONG_ALTERNATIVES_SELECTOR).first().click();\ncy.get(BUTTON_NEXT_QUESTION_SELECTOR).click();\ncy.get(BUTTON_RANKING_SELECTOR).click();\ncy.get(BUTTON_GO_HOME_SELECTOR).click();\ncy.get(INPUT_PLAYER_NAME_SELECTOR).clear();\ncy.get(INPUT_PLAYER_EMAIL_SELECTOR).clear();\ncy.get(INPUT_PLAYER_NAME_SELECTOR).type(name3);\ncy.get(INPUT_PLAYER_EMAIL_SELECTOR).type(email3);\ncy.get(BUTTON_PLAY_SELECTOR).click();\ncy.get(CORRECT_ALTERNATIVE_SELECTOR).click();\ncy.get(BUTTON_NEXT_QUESTION_SELECTOR).click();\ncy.get(WRONG_ALTERNATIVES_SELECTOR).first().click();\ncy.get(BUTTON_NEXT_QUESTION_SELECTOR).click();\ncy.get(WRONG_ALTERNATIVES_SELECTOR).first().click();\ncy.get(BUTTON_NEXT_QUESTION_SELECTOR).click();\ncy.get(WRONG_ALTERNATIVES_SELECTOR).first().click();\ncy.get(BUTTON_NEXT_QUESTION_SELECTOR).click();\ncy.get(WRONG_ALTERNATIVES_SELECTOR).first().click();\ncy.get(BUTTON_NEXT_QUESTION_SELECTOR).click();\ncy.get(BUTTON_RANKING_SELECTOR).click();\nconst ranking = [name1, name3, name2];\ncy.get(RANKING_PLAYERS_NAME_SELECTOR).should($el => {\n  expect($el).to.have.lengthOf(3);\n});\ncy.get(RANKING_PLAYERS_NAME_SELECTOR).each(($el, $index) => {\n  expect($el.text()).to.be.eq(ranking[$index]);\n});",
+              "err": {},
+              "uuid": "52e3ba43-edeb-4c0b-9c55-95b211470d47",
+              "parentUUID": "d64c4e98-8806-4a33-a80b-4937faaa193b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "294d599c-c3b5-4fe5-953a-6d17098a8c38",
+            "506f5269-034f-4887-9abf-639d316206c9",
+            "52e3ba43-edeb-4c0b-9c55-95b211470d47"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 15097,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "207e9344-3b8f-4643-915f-be51c62c9281",
+          "title": "20 - [TELA DE RANKING] Desenvolva testes para atingir 90% de cobertura da tela de Rankings",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verifica a cobertura de testes unitários",
+              "fullTitle": "20 - [TELA DE RANKING] Desenvolva testes para atingir 90% de cobertura da tela de Rankings Verifica a cobertura de testes unitários",
+              "timedOut": null,
+              "duration": 78,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.getCoverage().its('Ranking.functions.pct', {\n  timeout: 0\n}).should('be.gte', 90.00);\ncy.getCoverage().its('Ranking.lines.pct', {\n  timeout: 0\n}).should('be.gte', 90.00);",
+              "err": {},
+              "uuid": "60539be0-e3d6-4678-8443-7bf027f1aa82",
+              "parentUUID": "207e9344-3b8f-4643-915f-be51c62c9281",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "60539be0-e3d6-4678-8443-7bf027f1aa82"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 78,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
